@@ -28,7 +28,7 @@ npm install
 首先将静态页变为可访问
 
 ```shell
-# 如使用python的简易服务器，默认会监听5000端口
+# 如使用python的简易服务器，默认会监听8000端口
 python -m SimpleHTTPServer
 
 ```
