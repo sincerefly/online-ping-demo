@@ -1,5 +1,9 @@
 # online-ping-demo
-一个使用Flask和SocketIO编写的网页ping工具
+
+简易在线ping工具，将ping命令输出实时显示到web页面，基于Flask-SocketIO/socket.io
+
+- python 版本基于(flask | Flask-SocketIO | gevent)
+- nodejs 版本基于(express | socket.io)
 
 
 ### Usage
@@ -9,17 +13,32 @@
 ```shell
 git clone git@github.com:sincerefly/online-ping-demo.git
 cd online-ping-demo
+
+# python
+cd python
 pip install -r requirements.txt
+
+# nodejs
+cd nodejs
+npm install
 ```
 
 ### Run
 
-开启两个终端来运行
+首先将静态页变为可访问
 
 ```shell
+# 如使用python的简易服务器，默认会监听5000端口
+python -m SimpleHTTPServer
+
+```
+
+```shell
+# python
 python app.py
 
-python -m SimpleHTTPServer
+# nodejs
+nodejs index.js
 ```
 
 ### Note
@@ -30,11 +49,10 @@ python -m SimpleHTTPServer
 
 打开浏览器访问（如果是本地的话）
 
-http://localhost:8000 
+http://localhost:8000
 
 
 ![ping](https://ishell-imgs.b0.upaiyun.com/github/ping_small.gif)
-
 
 
 
