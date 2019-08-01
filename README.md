@@ -16,7 +16,7 @@ cd online-ping-demo
 
 # python
 cd python
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 # nodejs
 cd nodejs
@@ -28,12 +28,6 @@ npm install
 首先将静态页变为可访问
 
 ```shell
-# 如使用python的简易服务器，默认会监听8000端口
-python -m SimpleHTTPServer
-
-```
-
-```shell
 # python
 python app.py
 
@@ -43,16 +37,12 @@ nodejs index.js
 
 ### Note
 
-- *Flask 程序默认监听的5000端口，python 默认HTTP服务器监听的8000 端口， 请确保这两个端口没有被占用*
-- *index.html并不要求和app.py放在一处，app.py只是一个接口*
+打开浏览器访问
+
+http://[SERVER_IP]:5000
 
 
-打开浏览器访问（如果是本地的话）
-
-http://localhost:8000
-
-
-![ping](https://ishell-imgs.b0.upaiyun.com/github/ping_small.gif)
+![ping](./1.gif)
 
 
 
