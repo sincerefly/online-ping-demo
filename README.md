@@ -1,8 +1,8 @@
 # online-ping-demo
 
-简易在线ping工具，将ping命令输出实时显示到web页面，基于Flask-SocketIO/socket.io
+简易在线ping工具，将ping命令输出实时显示到web页面
 
-- python 版本基于(flask | Flask-SocketIO | gevent)
+- python 版本基于(flask | flask-socketio | eventlet)
 - nodejs 版本基于(express | socket.io)
 
 
@@ -25,12 +25,20 @@ npm install
 
 ### Run
 
-首先将静态页变为可访问
-
 ```shell
 # python
-python app.py
+python3 app.py
 
+Output: 
+
+[dong@nuc5]$ python3 app.py 
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 122-644-306
+(1390) wsgi starting up on http://0.0.0.0:5000
+```
+
+```shell
 # nodejs
 nodejs index.js
 ```
