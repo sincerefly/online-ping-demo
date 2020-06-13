@@ -20,7 +20,7 @@ cd online-ping-demo
 *Python3*
 
 ```bash
-cd python
+cd python3
 
 # 安装依赖
 pip3 install -r requirements.txt
