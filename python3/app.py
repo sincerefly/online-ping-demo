@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 from flask import copy_current_request_context, send_from_directory
@@ -8,9 +8,9 @@ from eventlet.green import threading
 from flask import Flask
 import os
 
-DIST_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'dist')
+DIST_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../dist')
 
-app = Flask(__name__, static_folder='dist/static')
+app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app, async_mode='eventlet')
@@ -23,20 +23,20 @@ def serve_dir_directory_index():
 def serve_file_in_dir(path):
     return send_from_directory(DIST_DIR, path)
 
-@socketio.on('ping-it', namespace='/test')
+@socketio.on('ping_request', namespace='/test')
 def ping_message(message):
 
     @copy_current_request_context
     def background_thread(addr):
-        
+
         cmd = 'ping -c 6 {}'.format(addr)
         r = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
         for line in iter(r.stdout.readline, b''):
             line = str(line).strip('\r\n')
             print(line)
-            emit('ping-reply', {'data': line}, namespace='/test')
+            emit('ping_response', {'data': str(line)}, namespace='/test')
 
-    addr = message['addr']
+    addr = message['url']
     thread = threading.Thread(target=background_thread, args=(addr, ))
     thread.daemon = True
     thread.start()

@@ -8,49 +8,43 @@
 
 ### Usage
 
-下载并安装依赖
+下载示例
 
 ```shell
 git clone git@github.com:sincerefly/online-ping-demo.git
 cd online-ping-demo
+```
 
-# python
+启动应用
+
+*Python3*
+
+```bash
 cd python
+
+# 安装依赖
 pip3 install -r requirements.txt
 
-# nodejs
-cd nodejs
-npm install
-```
-
-### Run
-
-```shell
-# python
+# 启动
 python3 app.py
-
-Output: 
-
-[dong@nuc5]$ python3 app.py 
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 122-644-306
-(1390) wsgi starting up on http://0.0.0.0:5000
 ```
 
-```shell
-# nodejs
-nodejs index.js
+*Node.js*
+
+```bash
+cd nodejs
+
+# 安装依赖
+npm install
+
+# 启动
+node app.js
 ```
 
-### Note
-
-打开浏览器访问
-
-http://[SERVER_IP]:5000
+打开浏览器访问 5000 端口查看
 
 
-![ping](./1.gif)
+![ping](./demo.gif)
 
 
 
