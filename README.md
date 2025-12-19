@@ -1,52 +1,37 @@
-# online-ping-demo
+# Online Ping Demo
 
-简易在线ping工具，将ping命令输出实时显示到web页面
+A simple web-based ping tool that displays real-time ping command output in the browser.
 
-- python 版本基于(flask | flask-socketio | eventlet)
-- nodejs 版本基于(express | socket.io)
+**Available Implementations:**
+- Python: Flask + Flask-SocketIO + Eventlet
+- Node.js: Express + Socket.IO
 
+## Quick Start
 
-### Usage
-
-下载示例
-
-```shell
+```bash
 git clone git@github.com:sincerefly/online-ping-demo.git
 cd online-ping-demo
 ```
 
-启动应用
-
-*Python3*
+### Python
 
 ```bash
 cd python3
-
-# 安装依赖
 python3 -m venv venv
-source source venv/bin/activate
+source venv/bin/activate
 pip3 install -r requirements.txt
-
-# 启动
 python3 app.py
 ```
 
-*Node.js*
+### Node.js
 
 ```bash
 cd nodejs
-
-# 安装依赖
 npm install
-
-# 启动
 node app.js
 ```
 
-打开浏览器访问 [http://127.0.0.1:5000](http://127.0.0.1:5000/) 端口查看
+Open [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser.
 
-
-![ping](./demo.gif)
-
-
+![Demo](./demo.gif)
 
