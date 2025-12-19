@@ -23,6 +23,8 @@ cd online-ping-demo
 cd python3
 
 # 安装依赖
+python3 -m venv venv
+source source venv/bin/activate
 pip3 install -r requirements.txt
 
 # 启动
@@ -41,7 +43,7 @@ npm install
 node app.js
 ```
 
-打开浏览器访问 5000 端口查看
+打开浏览器访问 [http://127.0.0.1:5000](http://127.0.0.1:5000/) 端口查看
 
 
 ![ping](./demo.gif)
